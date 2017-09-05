@@ -69,18 +69,6 @@ services:
             ENABLEIPV6: "no"
 ```
 
-### Use as a base image
-
-This image can also be used as a base image. `COPY` your own PeerVPN configuration
-file and overwrite the `ENTRYPOINT`.
-
-```
-FROM mjuenema/alpine-linux
-
-COPY peervpn.conf /etc/peervpn.conf
-
-ENTRYPOINT ['/sbin/peervpn', '/etc/peervpn.conf']
-```
 
 ## Authors
 
