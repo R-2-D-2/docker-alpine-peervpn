@@ -37,12 +37,12 @@ In the example below the IP address of the host running Docker is 10.0.2.15.
     docker run --name=vpn1 -p 7001:7001/udp --cap-add=NET_ADMIN \
         -e NETWORKNAME=mynet -e PSK=mykey -e PORT=7001 \
         -e INITPEERS='10.0.2.15 7002' -e IFCONFIG4='172.16.1.1/24' -d \
-        mjuenema/alpine-peervpn
+        thomasleister/peervpn
 
     docker run --name=vpn2 -p 7002:7002/udp --cap-add=NET_ADMIN \
         -e NETWORKNAME=mynet -e PSK=mykey -e PORT=7002 \
         -e INITPEERS='10.0.2.15 7001' -e IFCONFIG4='172.16.1.2/24' -d \
-        mjuenema/alpine-peervpn
+        thomasleister/peervpn
 
 
 ### Running image via docker-compose
